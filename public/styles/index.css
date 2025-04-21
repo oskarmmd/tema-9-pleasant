@@ -1,3 +1,7 @@
 .hero {
   background-color: #ffda5a;
 }
+
+.hero-logo {
+  height: 40px;
+}

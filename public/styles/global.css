@@ -1,13 +1,15 @@
 /* === GLOBAL SETUP === */
 html,
 body {
-  height: 100%;
   margin: 0;
+  padding: 0;
 }
+
 body {
   display: flex;
   flex-direction: column;
   font-family: "New Spirit", sans-serif;
+  background-color: #ffda5a;
 }
 
 a {
@@ -36,7 +38,6 @@ a:focus {
   background-color: #f4f0e7;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .top-bar {
