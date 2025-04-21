@@ -1,0 +1,129 @@
+---
+import Card from "../card.astro";
+---
+
+<section>
+  <h2>Få looket</h2>
+  <h3>Se hele udvalget</h3>
+  <article class="lookbook-grid">
+    <!-- Row 1: Image left, items right -->
+    <div class="lookbook-image">
+      <img src="/look_red.webp" alt="Lookbook" />
+    </div>
+    <div class="lookbook-items">
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+    </div>
+
+    <!-- Row 2: Items left, image right -->
+    <div class="lookbook-items">
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+      <Card
+        image="/item1.webp"
+        title="Abstract nature upcycled shirt"
+        price="499,00 DKK"
+      />
+    </div>
+    <div class="lookbook-image">
+      <img src="/look_red.webp" alt="Lookbook" />
+    </div>
+  </article>
+</section>
+
+<style>
+  .lookbook-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100vh, auto);
+    row-gap: 100px;
+  }
+
+  .lookbook-image {
+    position: relative;
+  }
+
+  .lookbook-image img {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+  }
+
+  .lookbook-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    overflow-y: scroll;
+    padding: 2rem;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .lookbook-grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+    }
+
+    .lookbook-image img {
+      position: relative;
+      height: auto;
+    }
+
+    .lookbook-items {
+      overflow: visible;
+    }
+  }
+</style>
