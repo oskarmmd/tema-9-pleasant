@@ -1,0 +1,47 @@
+---
+import Sidenav from '../components/Sidenav.astro';
+import Card from '../components/Productcard.astro';
+---
+
+<h1>Skjorter</h1>
+
+<div class="page-grid">
+<Sidenav />
+    <div class="grid">
+    <Card/>
+    </div>
+</div>
+
+
+<style>
+body{
+    background-color: #f3f0e7;
+}
+
+
+h1{
+    text-align: center;
+}
+
+.page-grid {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidenav {
+  flex: 0 0 250px;
+}
+
+.grid {
+  flex: 1; /* take remaining space */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: stretch;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+
+</style>
+
+
