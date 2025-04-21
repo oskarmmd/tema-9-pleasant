@@ -57,9 +57,6 @@ a:focus {
 .top-bar__social a {
   margin-left: 1rem;
 }
-
-/* === MAIN CONTENT === */
-
 /* === FOOTER === */
 .site-footer {
   flex-shrink: 0;
