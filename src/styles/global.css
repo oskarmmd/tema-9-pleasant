@@ -11,9 +11,15 @@ body {
   font-family: "New Spirit", sans-serif;
   background-color: #f2f0e8;
 }
+<<<<<<< HEAD:public/styles/global.css
 
 main {
   margin: 0 auto;
+=======
+.content{
+width: 90%;
+margin: 0 auto;
+>>>>>>> origin/main:src/styles/global.css
 }
 
 a {
