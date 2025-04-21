@@ -11,8 +11,7 @@ body {
   font-family: "New Spirit", sans-serif;
   background-color: #F2F0E8;
 }
-
-main{
+.content{
 width: 90%;
 margin: 0 auto;
 }
