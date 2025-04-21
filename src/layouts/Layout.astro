@@ -1,0 +1,23 @@
+---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title} | Pleasant</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" />
+    <link href="https://fonts.cdnfonts.com/css/new-spirit" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <Header />
+    <main class="content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
