@@ -22,25 +22,99 @@ import Card from "../components/card.astro";
           <img src="/look_red.webp" alt="Lookbook" />
         </div>
         <div class="lookbook-items">
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
         </div>
 
         <!-- Row 2: Items left, image right -->
         <div class="lookbook-items">
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
+          <Card
+            image="/item1.webp"
+            title="Abstract nature upcycled shirt"
+            price="499,00 DKK"
+          />
         </div>
         <div class="lookbook-image">
           <img src="/look_red.webp" alt="Lookbook" />
+        </div>
+      </article>
+    </section>
+
+    <section class="ros">
+      <article class="popup content">
+        <div class="text-side">
+          <h2>Pleasant på Roskilde Festival</h2>
+          <p>
+            Vi er tilbage med vores hyggelige upcycled pop-up shop! Kig forbi og
+            gå på opdagelse i unikke, bæredygtige styles – perfekte til
+            festivalstemningen.
+          </p>
+
+          <h3>Print-event</h3>
+          <p>
+            I løbet af festivalen vil vi invitere jer til vores populære
+            print-event. Medbring en gammel t-shirt eller få printet et design
+            på et item fra Pleasant – og få 10 % rabat på dit køb. Tag del i
+            fællesskabet, hvor bæredygtighed møder kreativitet! Følg med på
+            sociale medier for opdateringer og tidspunkter.
+          </p>
+        </div>
+
+        <div class="image-side">
+          <img src="/print.webp" alt="T-shirt logo for print event" />
         </div>
       </article>
     </section>
@@ -52,6 +126,9 @@ import Card from "../components/card.astro";
 </Layout>
 
 <style>
+  section {
+    margin-bottom: 100px;
+  }
   /**************BANNER ***************/
   .banner img {
     width: 100%;
@@ -85,20 +162,33 @@ import Card from "../components/card.astro";
     padding: 2rem;
   }
 
-  /* Mobile styles */
-  @media (max-width: 768px) {
-    .lookbook-grid {
-      grid-template-columns: 1fr;
-      grid-auto-rows: auto;
-    }
+  /****************ROSKILDE ************/
 
-    .lookbook-image img {
-      position: relative;
-      height: auto;
-    }
+  .ros {
+    background-color: #f39031;
+    color: white;
+  }
 
-    .lookbook-items {
-      overflow: visible;
-    }
+  .popup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    padding: 40px 0;
+  }
+
+  .text-side {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
+  .image-side {
+    flex-shrink: 0;
+    max-width: 350px;
+  }
+
+  .image-side img {
+    max-width: 100%;
+    height: auto;
   }
 </style>
