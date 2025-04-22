@@ -31,8 +31,13 @@
   border: none;
   border-radius: 15px;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .collage {
   padding: 4rem;
+}
+
+h1{
+  font-weight: 700;
 }
