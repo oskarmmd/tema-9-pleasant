@@ -2,10 +2,14 @@
 import Products from '../data/products.json';
 ---
 
+
+
 {Products.map(product => (
  <div class="card">
 <div class="img-container">
-  <img src={product.images} alt={product.title} />
+  <a href="/singleView">
+  <img src={product.images[0]} alt={product.title} /></a>
+
 </div>
   <h4>{product.title}</h4>
   <p>{product.price}</p>
@@ -15,7 +19,7 @@ import Products from '../data/products.json';
 {Products.map(product => (
   <div class="card">
    <div class="img-container">
-  <img src={product.images} alt={product.title} />
+  <img src={product.images[0]} alt={product.title} />
 </div>
    <h4>{product.title}</h4>
    <p>{product.price}</p>
