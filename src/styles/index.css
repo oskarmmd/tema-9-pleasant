@@ -3,5 +3,36 @@
 }
 
 .hero-logo {
-  height: 40px;
+  height: 80px;
+}
+
+.hero_inner {
+  display: flex; /* Gør container til flexbox */
+  align-items: center; /* Centrer items lodret */
+  justify-content: space-between; /* Fordel tekst og billeder i hver sin side */
+  gap: 2rem; /* Lidt luft mellem kolonnerne */
+}
+
+/* Sørger for at tekst‑kolonnen ikke bliver for bred */
+.hero_textnbutton {
+  flex: 1 1 40%; /* vokser/bliver skrumpet men min. 40% bredde */
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.hero button {
+  padding: 1rem 3.2rem 1rem 3.2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+
+.collage {
+  padding: 4rem;
 }
