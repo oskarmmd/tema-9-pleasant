@@ -9,7 +9,12 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "New Spirit", sans-serif;
-  background-color: #ffda5a;
+  background-color: #F2F0E8;
+}
+
+main{
+width: 90%;
+margin: 0 auto;
 }
 
 a {
