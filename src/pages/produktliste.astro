@@ -1,8 +1,12 @@
 ---
 import Sidenav from '../components/Sidenav.astro';
 import Card from '../components/Productcard.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
+
+<Layout title="tøj">
+    <main>
 <h1>Skjorter</h1>
 
 <div class="page-grid">
@@ -11,6 +15,11 @@ import Card from '../components/Productcard.astro';
     <Card/>
     </div>
 </div>
+
+</main>
+</Layout>
+
+
 
 
 <style>
@@ -26,6 +35,7 @@ h1{
 .page-grid {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 2em;
 }
 
 .sidenav {
