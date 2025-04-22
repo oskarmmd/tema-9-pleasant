@@ -1,44 +1,5 @@
 [
-    {
-      "title": "Tropical Dog Party Upcycled Shirt",
-      "description": "Pleasant upcycled skjorte – ny skjorte af brugt tekstil. Denne miljøvenlige upcycled Pleasant skjorte er skabt af nøje udvalgt brugt tekstil.",
-      "price": "649,00 DKK",
-      "images": [
-        "https://pleasant.dk/cdn/shop/files/Juli_2023.jpg?v=1690546462"
-      ],
-      "materials": "Brugt tekstil",
-      "production": "Produceret i Filippinerne",
-      "unique": true,
-      "sustainability": [
-        "Minimer CO2-aftrykket i din garderobe.",
-        "Undgå store mængder vand og kemikalier i dit tøjforbrug.",
-        "Støt en fremtid med mindre behov for nyt tekstil.",
-        "Bidrag til en positiv forandring i tøjbranchen."
-      ],
-      "shipping": "1-3 dags levering",
-      "return_policy": "Gratis retur",
-      "trustpilot_rating": "4.7"
-    },
-    {
-      "title": "Watercolor Upcycled Shirt",
-      "description": "Pleasant upcycled skjorte – ny skjorte af brugt tekstil. Denne miljøvenlige upcycled Pleasant skjorte er skabt af nøje udvalgt brugt tekstil.",
-      "price": "649,00 DKK",
-      "images": [
-        "https://pleasant.dk/cdn/shop/files/upcycled_shirts_marts_24_low_res-56.jpg?v=1735323334"
-      ],
-      "materials": "Brugt tekstil",
-      "production": "Produceret i Filippinerne",
-      "unique": true,
-      "sustainability": [
-        "Minimer CO2-aftrykket i din garderobe.",
-        "Undgå store mængder vand og kemikalier i dit tøjforbrug.",
-        "Støt en fremtid med mindre behov for nyt tekstil.",
-        "Bidrag til en positiv forandring i tøjbranchen."
-      ],
-      "shipping": "1-3 dags levering",
-      "return_policy": "Gratis retur",
-      "trustpilot_rating": "4.7"
-    },
+    
     {
       "title": "Blue Checkered Upcycled Cap",
       "description": "Pleasant upcycled kasket – ny kasket af brugt tekstil. Denne miljøvenlige upcycled Pleasant kasket er skabt af nøje udvalgt brugt tekstil.",
@@ -79,25 +40,88 @@
       "return_policy": "Gratis retur",
       "trustpilot_rating": "4.7"
     },
+
     {
-      "title": "Abstract Art Upcycled Bucket Hat",
-      "description": "Unique bucket hat made from upcycled fabric. Only a few pieces of each. As these are unique the bucket hat you get can occur slightly differently than the one pictured.",
-      "price": "399,00 DKK",
-      "images": [
-        "https://pleasant.dk/cdn/shop/products/buckethats-50.jpg?v=1681328093"
-      ],
-      "materials": "Brugt tekstil",
-      "production": "Produceret i Filippinerne",
-      "unique": true,
-      "sustainability": [
-        "Minimal miljøpåvirkning.",
-        "Mindre spild. Mere natur.",
-        "Dit valg gør en forskel."
-      ],
-      "shipping": "1-3 dags levering",
-      "return_policy": "Gratis retur",
-      "trustpilot_rating": "4.7"
-    }
+        "title": "Kens Striped Upcycled Shirt",
+        "price": "699,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/shirts_20.2.25_26.jpg?v=1740407529"],
+        "category": "Shirt",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      },
+      {
+        "title": "Extremely Vibrant Upcycled Shirt",
+        "price": "699,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/shirts_20.2.25_11.jpg?v=1740406101"],
+        "category": "Shirt",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      },
+      {
+        "title": "Blueprint Upcycled Shirt",
+        "price": "699,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/19.jpg?v=1738161520"],
+        "category": "Shirt",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      },
+      {
+        "title": "Fresh Prince of Bel Air Upcycled Cap",
+        "price": "399,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/upcycledcaps_tall11_main.jpg?v=1734018077"],
+        "category": "Cap",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      },
+      {
+        "title": "Bodega Curtain Upcycled Cap",
+        "price": "399,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/upcycledcaps_tall9_main.jpg?v=1734015808"],
+        "category": "Cap",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      },
+      {
+        "title": "Purple Haze Upcycled Cap",
+        "price": "399,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/upcycledcaps_tall94_main.jpg?v=1734010220"],
+        "category": "Cap",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      },
+      {
+        "title": "Winter Love Upcycled Cap",
+        "price": "399,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/upcycledcaps_tall70_main.jpg?v=1734013798"],
+        "category": "Cap",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      },
+      {
+        "title": "Breakdance Upcycled Cap",
+        "price": "399,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/upcycledcaps_tall44_main.jpg?v=1734009425"],
+        "category": "Cap",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      },
+      {
+        "title": "Great Painting Upcycled Shirt",
+        "price": "699,00 DKK",
+        "images": ["https://pleasant.dk/cdn/shop/files/17_main.jpg?v=1736932946"],
+        "category": "Shirt",
+        "shipping": "1–3 dages levering",
+        "return_policy": "Gratis retur",
+        "trustpilot_rating": "4.7"
+      }
 ]
 
         
