@@ -1,5 +1,6 @@
 .hero {
   background-color: #ffda5a;
+  height: 40rem;
 }
 
 .hero-logo {
@@ -36,8 +37,4 @@
 
 .collage {
   padding: 4rem;
-}
-
-h1{
-  font-weight: 700;
 }
