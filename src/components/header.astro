@@ -1,10 +1,6 @@
----
-import "../styles/global.css";
----
-
 <header>
+  
   <div class="top-bar">
-    <!-- <a href="/retur" class="top-bar__link">Gratis retur</a> -->
     <div class="container">
       <nav class="top-bar__nav">
         <a href="/stories">Stories</a>
@@ -13,33 +9,90 @@ import "../styles/global.css";
         <a href="/styleguide">Styleguide</a>
         <a href="/forhandlere">Forhandlere</a>
       </nav>
-      <!-- <div class="top-bar__social">
-        <a href="#"><img src="/icons/facebook.svg" alt="Facebook" /></a>
-        <a href="#"><img src="/icons/instagram.svg" alt="Instagram" /></a>
-        <a href="#"><img src="/icons/tiktok.svg" alt="TikTok" /></a>
-      </div> -->
     </div>
   </div>
 
-  <!-- Hoved-navigation med logo -->
   <div class="main-nav">
     <div class="container">
       <div class="logo-container">
-        <a href="/" class="logo"
-          ><img src="/pleasantlogo1.png" alt="Pleasant" /></a
-        >
+        <a href="/" class="logo">
+          <img src="/pleasantlogo1.png" alt="Pleasant" />
+        </a>
       </div>
+
+      <!-- Hidden checkbox toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+      <!-- Label becomes burger icon -->
+      <label for="nav-toggle" class="burger">☰</label>
+
+      <!-- Navigation menu -->
       <nav class="site-nav">
-        <a href="/produktliste">Kasketter ⮟</a>
         <a href="/produktliste">Tøj ⮟</a>
         <a href="/produktliste">Livsstil ⮟</a>
         <a href="/produktliste">Drops ⮟</a>
+        <a href="/stories" class="hide">Stories</a>
+        <a href="/hvorfor-pla" class="hide">Hvorfor vælge Pleasant?</a>
+        <a href="/gensalg" class="hide">Gensalg</a>
+        <a href="/styleguide" class="hide">Styleguide</a>
+        <a href="/forhandlere" class="hide">Forhandlere</a>
       </nav>
-      <!-- <div class="site-actions">
-        <a href="/søg"><img src="/icons/search.svg" alt="Søg" /></a>
-        <a href="/min-konto"><img src="/icons/user.svg" alt="Min konto" /></a>
-        <a href="/kurv"><img src="/icons/cart.svg" alt="Kurv" /></a>
-      </div> -->
     </div>
   </div>
 </header>
+
+<style>
+.top-bar{
+  display: none;
+}
+.nav-toggle {
+  display: none;
+}
+
+/* Mobile nav hidden by default */
+.site-nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+
+}
+
+.nav-toggle:checked + .burger + .site-nav {
+  display: flex;
+}
+
+.burger {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  left: 90%;
+  top: 1%;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+
+  .top-bar{
+    display: block;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .burger, .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: flex; 
+    flex-direction: row;
+    gap: 2rem;
+    background: none;
+    padding: 0;
+  }
+}
+
+</style>
