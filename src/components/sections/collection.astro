@@ -8,11 +8,12 @@ import Card from "../card.astro";
     <h2>Se kollektionen nu</h2>
   </div>
   <div class="favoritter">
-    <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-    <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-    <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="https://pleasant.dk/cdn/shop/files/upcycledcaps_tall174_main.jpg?v=1733909339" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="https://pleasant.dk/cdn/shop/files/shirts_20.2.25_26.jpg?v=1740407529" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="https://pleasant.dk/cdn/shop/files/17_main.jpg?v=1736932946" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="https://pleasant.dk/cdn/shop/files/upcycledcaps_tall44_main.jpg?v=1734009425" title="Abstract nature upcycled shirt" price="499,00 DKK" />
   </div>
-  <div class="3imgbanner">
+  <div class="imgbanner">
     <img src="/public/Group 38.png" alt="bannerphotoshoot" />
   </div>
 </section>
@@ -35,5 +36,8 @@ import Card from "../card.astro";
   .favoritter > * {
     flex: 0 0 calc(33.333% - 1rem);
     box-sizing: border-box;
+  }
+  .imgbanner {
+    margin-bottom: auto;
   }
 </style>
