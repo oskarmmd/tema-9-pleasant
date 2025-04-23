@@ -18,5 +18,11 @@ const { image, title, price } = Astro.props;
   .card {
     text-align: center;
     background-color: #f3f0e7;
+    margin-top: -20px;
+  }
+  @media (max-width: 640px) {
+    .card {
+      padding-left: 25px;
+    }
   }
 </style>
