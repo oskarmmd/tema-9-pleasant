@@ -6,9 +6,8 @@ import Hero from "../components/sections/hero.astro";
 import FeaturedCollection from "../components/sections/collection.astro";
 import Sustainability from "../components/sections/sustainability.astro";
 import PopUp from "../components/sections/popup.astro";
-import Card from '../components/Productcard.astro';
-import LookCard from '../components/Lookbook.astro';
-
+import Card from "../components/Productcard.astro";
+import LookCard from "../components/Lookbook.astro";
 ---
 
 <Layout title="Forside">
@@ -25,12 +24,22 @@ import LookCard from '../components/Lookbook.astro';
           <img src="/public/DSCF1978 1.png" alt="Lookbook" />
         </div>
         <div class="lookbook-items">
-          <LookCard/>
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
         </div>
 
         <!-- Row 2: Items left, image right -->
         <div class="lookbook-items">
-          <LookCard/>
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
         </div>
         <div class="lookbook-image">
           <img src="/look_red.webp" alt="Lookbook" />
@@ -113,12 +122,22 @@ import LookCard from '../components/Lookbook.astro';
   .popup {
     display: flex;
     flex-direction: column;
+    flex-direction: column;
     align-items: center;
   }
 
   .image-side {
     flex-shrink: 0;
     max-width: 350px;
+    padding: 45px;
+  }
+
+  @media (width >= 768px) {
+    .popup {
+      flex-direction: row;
+      gap: 50px;
+      padding: 40px 0;
+    }
     padding: 45px;
   }
 
