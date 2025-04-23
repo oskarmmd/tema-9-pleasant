@@ -1,5 +1,4 @@
 <header>
-  
   <div class="top-bar">
     <div class="container">
       <nav class="top-bar__nav">
@@ -28,9 +27,9 @@
 
       <!-- Navigation menu -->
       <nav class="site-nav">
-        <a href="/produktliste">Tøj ⮟</a>
-        <a href="/produktliste">Livsstil ⮟</a>
-        <a href="/produktliste">Drops ⮟</a>
+        <a href="/produktliste">Tøj </a>
+        <a href="/produktliste">Livsstil </a>
+        <a href="/produktliste">Drops </a>
         <a href="/stories" class="hide">Stories</a>
         <a href="/hvorfor-pla" class="hide">Hvorfor vælge Pleasant?</a>
         <a href="/gensalg" class="hide">Gensalg</a>
@@ -42,57 +41,63 @@
 </header>
 
 <style>
-.top-bar{
-  display: none;
-}
-.nav-toggle {
-  display: none;
-}
-
-/* Mobile nav hidden by default */
-.site-nav {
-  display: none;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-
-}
-
-.nav-toggle:checked + .burger + .site-nav {
-  display: flex;
-}
-
-.burger {
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  position: absolute;
-  left: 90%;
-  top: 1%;
-}
-
-/* Desktop styles */
-@media (min-width: 768px) {
-
-  .top-bar{
-    display: block;
+  .top-bar {
+    display: none;
   }
-
-  .hide{
+  .nav-toggle {
     display: none;
   }
 
-  .burger, .nav-toggle {
-    display: none;
-  }
-
+  /* Mobile nav hidden by default */
   .site-nav {
-    display: flex; 
-    flex-direction: row;
-    gap: 2rem;
-    background: none;
-    padding: 0;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
   }
-}
 
+  .nav-toggle:checked + .burger + .site-nav {
+    display: flex;
+  }
+
+  .burger {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    left: 90%;
+    top: 1%;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 768px) {
+    .top-bar {
+      display: block;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .burger,
+    .nav-toggle {
+      display: none;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      background: none;
+      padding: 0;
+    }
+  }
+  /* target only the top-level menu items that should have an arrow */
+  .site-nav > a:not(.hide)::after {
+    content: "▼"; /* or "\25BE" for a slightly different arrow */
+    display: inline-block;
+    margin-left: 0.25em;
+    font-size: 0.75em; /* adjust to taste */
+    vertical-align: middle;
+  }
 </style>
