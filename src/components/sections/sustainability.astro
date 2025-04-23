@@ -2,48 +2,52 @@
 import Lottiefile from "../Lottiefile.astro";
 ---
 
-<section class="baredygtig">
-  <div class="sustainindhold">
-    <div class="content">
-      <h2>Pleasant er 100% bæredygtig</h2>
-      <p>Når du handler hos os, støtter du en ansvarlig modeindustri med fokus på økologi, genbrug og fair forhold. Dit valg gør en reel forskel for både mennesker og planet.</p>
+
+<section>
+  <div class="baredygtig">
+    <div>
+      <h2>Tøj der holder — også til festivaler</h2>
+      <p>
+        Når du handler hos os, støtter du en ansvarlig modeindustri med fokus på
+        økologi, genbrug og fair forhold. Dit valg gør en reel forskel for både
+        mennesker og planet.<br />
+        <br /> Hos Pleasant designer vi tøj, der er skabt til at blive brugt igen
+        og igen — også når dagene er lange, og nætterne bliver til morgener. Vi forvandler
+        brugte tekstiler til nyt tøj — og sparer samtidig kloden for store mængder
+        vand, kemi og CO2. <br />
+        <br /> Vi tror på tidløst design, holdbarhed og færre kompromiser. Så når
+        du klæder dig på til festival, klæder du dig også på til en grønnere fremtid.
+      </p>
     </div>
     <div class="lottie">
       <Lottiefile />
-      <!-- <Lottiefile /> -->
+      <Lottiefile />
+
     </div>
   </div>
 </section>
 <style>
+  section {
+    background-color: #3d7a53;
+  }
   .baredygtig {
     display: flex;
-    background-color: #3d7a53;
-    padding: 2rem 1rem;
-    color: white;
-    height: 20rem;
-    align-items: center;
-  }
-  .sustainindhold {
-    max-width: 85%;
+    width: 90%;
     margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 2rem;
-    align-items: center;
+    padding: 30px 0;
+    color: white;
+    gap: 30px;
   }
+  
   .lottie {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .content {
-    padding-top: 20px;
     align-items: center;
-    max-width: 65%;
+    max-width: 500px;
   }
+
+
   .baredygtig p {
     font-size: 1rem;
-    line-height: 3;
+    line-height: 2;
   }
 </style>
