@@ -1,57 +1,79 @@
 ---
-import Sidenav from '../components/Sidenav.astro';
-import Card from '../components/Productcard.astro';
-import Layout from "../layouts/Layout.astro"; 
+import Sidenav from "../components/Sidenav.astro";
+import Card from "../components/Productcard.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-
 <Layout title="tøj">
-    <main>
-<h1>Skjorter</h1>
+  <main>
+    <h1>Skjorter</h1>
 
-<div class="page-grid">
-<Sidenav />
-    <div class="grid">
-    <Card/>
+    <div class="page-grid">
+      <Sidenav />
+      <div class="grid">
+        <Card />
+      </div>
     </div>
-</div>
-
-</main>
+  </main>
 </Layout>
 
-
-
-
 <style>
-body{
+  body {
     background-color: #f3f0e7;
-}
+  }
 
-
-h1{
+  h1 {
     text-align: center;
-}
+  }
 
-.page-grid {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 2em;
-}
+  .page-grid {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+  }
 
-.sidenav {
-  flex: 0 0 250px;
-}
+  .sidenav {
+    flex: 0 0 250px;
+  }
 
-.grid {
-  flex: 1; /* take remaining space */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: stretch;
-  gap: 2rem;
-  padding-left: 2rem;
-}
+  .grid {
+    flex: 1; /* take remaining space */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: stretch;
+    gap: 2rem;
+    padding-left: 2rem;
+  }
 
+  /* put this in your global CSS or at the bottom of your page’s <style> */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
 
+  /* ensure padding doesn’t blow out widths */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .page-grid {
+      flex-direction: column;
+    }
+
+    .sidenav {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      /* two columns instead of one */
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding-left: 0;
+    }
+  }
 </style>
-
-
