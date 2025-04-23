@@ -7,16 +7,16 @@ body {
 
 body {
   font-family: "New Spirit", sans-serif;
-  background-color: #F2F0E8;
+  background-color: #f2f0e8;
 }
 
-img{
+img {
   width: 100%;
 }
 
-.content{
-width: 90%;
-margin: 0 auto;
+.content {
+  width: 90%;
+  margin: 0 auto;
 }
 
 a {

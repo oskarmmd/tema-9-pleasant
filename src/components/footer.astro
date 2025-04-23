@@ -47,3 +47,57 @@ import "../styles/global.css";
     <p>© 2025 Pleasant.</p>
   </div>
 </footer>
+
+<style>
+  .footer-content {
+    display: flex;
+  }
+  /* Scale footer text using viewport-width units */
+  .footer-content h4 {
+    font-size: 2.5vw; /* heading scales with viewport width */
+  margin: 0;   /* remove the default top/bottom margins */
+  padding: 0;  /* if you ever do have a padding rule inherited, this clears it */
+}
+
+  }
+
+  .footer-content p,
+  .footer-links a,
+  .footer-bottom p {
+    font-size: 1.5vw; /* body text scales with viewport width */
+  }
+
+  /* Optional: ensure a minimum and maximum size */
+  .footer-content h4 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  .footer-content p,
+  .footer-links a,
+  .footer-bottom p {
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+  }
+  /* Scale the footer logo with viewport width */
+  .footer-logo img {
+    width: clamp(6rem, 6vw, 10rem);
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    .site-footer .footer-content {
+      flex-wrap: wrap; /* allow wrapping */
+    }
+
+    /* Two columns: About + Links */
+    .site-footer .footer-about,
+    .site-footer .footer-links {
+      flex: 0 0 calc(50% - 1rem); /* half the width minus half the gap */
+      max-width: calc(50% - 1rem);
+    }
+
+    /* Newsletter takes full width below */
+    .site-footer .footer-newsletter {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+  }
+</style>
