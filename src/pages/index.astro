@@ -25,12 +25,17 @@ import LookCard from '../components/Lookbook.astro';
           <img src="/public/DSCF1978 1.png" alt="Lookbook" />
         </div>
         <div class="lookbook-items">
+
           <LookCard/>
+
+          
         </div>
 
         <!-- Row 2: Items left, image right -->
         <div class="lookbook-items">
+
           <LookCard/>
+
         </div>
         <div class="lookbook-image">
           <img src="/look_red.webp" alt="Lookbook" />
@@ -42,12 +47,19 @@ import LookCard from '../components/Lookbook.astro';
       <article class="popup content">
         <div class="text-side">
           <h2>Pleasant på Roskilde Festival</h2>
-          <p>Vi er tilbage med vores hyggelige upcycled pop-up shop! Kig forbi og gå på opdagelse i unikke, bæredygtige styles – perfekte til festivalstemningen.</p>
+          <p>
+            Vi er tilbage med vores hyggelige upcycled pop-up shop! Kig forbi og
+            gå på opdagelse i unikke, bæredygtige styles – perfekte til
+            festivalstemningen.
+          </p>
 
           <h3>Print-event</h3>
           <p>
-            I løbet af festivalen vil vi invitere jer til vores populære print-event. Medbring en gammel t-shirt eller få printet et design på et item fra Pleasant – og få 10 % rabat på dit køb. Tag del i fællesskabet, hvor bæredygtighed møder
-            kreativitet! Følg med på sociale medier for opdateringer og tidspunkter.
+            I løbet af festivalen vil vi invitere jer til vores populære
+            print-event. Medbring en gammel t-shirt eller få printet et design
+            på et item fra Pleasant – og få 10 % rabat på dit køb. Tag del i
+            fællesskabet, hvor bæredygtighed møder kreativitet! Følg med på
+            sociale medier for opdateringer og tidspunkter.
           </p>
         </div>
 
@@ -64,12 +76,15 @@ import LookCard from '../components/Lookbook.astro';
 </Layout>
 
 <style>
-  section {
-    margin-bottom: 0;
-  }
+  /* section {
+    margin-bottom: auto;
+  } */
   /**************BANNER ***************/
   .banner img {
     width: 100%;
+  }
+  .banner {
+    margin-bottom: -5px;
   }
 
   /**************FÅ LOOKET ***************/
@@ -109,24 +124,21 @@ import LookCard from '../components/Lookbook.astro';
 
   .popup {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 70px;
-    padding: 40px 0;
-  }
-
-  .text-side {
-    flex: 1;
-    padding-right: 2rem;
   }
 
   .image-side {
     flex-shrink: 0;
     max-width: 350px;
+    padding: 45px;
   }
 
-  .image-side img {
-    max-width: 100%;
-    height: auto;
+  @media (width >= 768px) {
+    .popup {
+      flex-direction: row;
+      gap: 50px;
+      padding: 40px 0;
+    }
   }
 </style>

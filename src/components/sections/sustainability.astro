@@ -2,12 +2,12 @@
 import Lottiefile from "../Lottiefile.astro";
 ---
 
-
 <section>
   <div class="baredygtig">
     <div>
       <h2>Tøj der holder — også til festivaler</h2>
       <p>
+
         Når du handler hos os, støtter du en ansvarlig modeindustri med fokus på
         økologi, genbrug og fair forhold. Dit valg gør en reel forskel for både
         mennesker og planet.<br />
@@ -17,12 +17,11 @@ import Lottiefile from "../Lottiefile.astro";
         vand, kemi og CO2. <br />
         <br /> Vi tror på tidløst design, holdbarhed og færre kompromiser. Så når
         du klæder dig på til festival, klæder du dig også på til en grønnere fremtid.
+
       </p>
     </div>
     <div class="lottie">
       <Lottiefile />
-      <Lottiefile />
-
     </div>
   </div>
 </section>
@@ -31,23 +30,31 @@ import Lottiefile from "../Lottiefile.astro";
     background-color: #3d7a53;
   }
   .baredygtig {
+    color: white;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
     margin: 0 auto;
-    padding: 30px 0;
-    color: white;
-    gap: 30px;
   }
-  
+
   .lottie {
     display: flex;
     align-items: center;
     max-width: 500px;
+    padding: 30px;
   }
-
 
   .baredygtig p {
     font-size: 1rem;
     line-height: 2;
+  }
+
+  @media (width >= 768px) {
+    .baredygtig {
+      flex-direction: row;
+      padding: 30px 0;
+      gap: 30px;
+    }
   }
 </style>
