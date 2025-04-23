@@ -6,7 +6,9 @@ import Hero from "../components/sections/hero.astro";
 import FeaturedCollection from "../components/sections/collection.astro";
 import Sustainability from "../components/sections/sustainability.astro";
 import PopUp from "../components/sections/popup.astro";
-import Card from "../components/card.astro";
+import Card from '../components/Productcard.astro';
+import LookCard from '../components/Lookbook.astro';
+
 ---
 
 <Layout title="Forside">
@@ -23,22 +25,12 @@ import Card from "../components/card.astro";
           <img src="/public/DSCF1978 1.png" alt="Lookbook" />
         </div>
         <div class="lookbook-items">
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <LookCard/>
         </div>
 
         <!-- Row 2: Items left, image right -->
         <div class="lookbook-items">
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <LookCard/>
         </div>
         <div class="lookbook-image">
           <img src="/look_red.webp" alt="Lookbook" />
