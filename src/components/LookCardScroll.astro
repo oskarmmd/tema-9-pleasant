@@ -1,0 +1,65 @@
+---
+import Looks from "../data/lookbook.json";
+---
+
+<div class="lookbook-scroll">
+  {
+    Looks.map((look) => (
+      <div class="scroll-card">
+        <div class="img-container">
+          <a href="/singleView">
+            <img src={look.images[0]} alt={look.title} />
+          </a>
+        </div>
+        <h4>{look.title}</h4>
+        <p>{look.price} DKK</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .lookbook-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: #bbb transparent;
+    scrollbar-width: thin;
+  }
+
+  /* Webkit (Chrome, Safari) */
+  .lookbook-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .lookbook-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .lookbook-scroll::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 2px;
+  }
+
+  .scroll-card {
+    flex: 0 0 50vw;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #f3f0e7;
+    text-align: center;
+  }
+
+  .img-container {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+</style>

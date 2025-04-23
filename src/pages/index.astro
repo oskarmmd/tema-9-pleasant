@@ -8,6 +8,7 @@ import Sustainability from "../components/sections/sustainability.astro";
 import PopUp from "../components/sections/popup.astro";
 import Card from "../components/Productcard.astro";
 import LookCard from "../components/Lookbook.astro";
+import LookCardScroll from "../components/LookCardScroll.astro";
 ---
 
 <Layout title="Forside">
@@ -15,34 +16,49 @@ import LookCard from "../components/Lookbook.astro";
     <Hero />
     <FeaturedCollection />
     <Sustainability />
-    <section class="content">
+
+    <!-- DESKTOP VERSION -->
+    <section class="lookbook-desktop content">
       <h2>Få looket</h2>
       <h3>Se hele udvalget</h3>
       <article class="lookbook-grid">
-        <!-- Row 1: Image left, items right -->
         <div class="lookbook-image">
           <img src="/public/DSCF1978 1.png" alt="Lookbook" />
         </div>
         <div class="lookbook-items">
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <LookCard />
         </div>
-
-        <!-- Row 2: Items left, image right -->
         <div class="lookbook-items">
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
-          <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+          <LookCard />
         </div>
         <div class="lookbook-image">
           <img src="/look_red.webp" alt="Lookbook" />
+        </div>
+      </article>
+    </section>
+
+    <!-- MOBIL VERSION -->
+    <section class="content lookbook-mobile">
+      <h2>Få looket</h2>
+      <h3>Se hele udvalget</h3>
+
+      <article lookbook-mobile>
+        <div class="mobile-image">
+          <img src="/public/DSCF1978 1.png" alt="Lookbook" />
+        </div>
+
+        <div class="mobile-items">
+          <LookCardScroll />
+        </div>
+      </article>
+
+      <article lookbook-mobile>
+        <div class="mobile-image">
+          <img src="/look_red.webp" alt="Lookbook" />
+        </div>
+
+        <div class="mobile-items">
+          <LookCardScroll />
         </div>
       </article>
     </section>
@@ -70,82 +86,110 @@ import LookCard from "../components/Lookbook.astro";
       <img src="/banner.webp" alt="Billede collage" />
     </section>
   </main>
+
+  <style>
+    section {
+      margin-bottom: 100px;
+    }
+    /**************BANNER ***************/
+    .banner img {
+      width: 100%;
+    }
+    .banner {
+      margin-bottom: -5px;
+    }
+
+    /**************FÅ LOOKET ***************/
+    .lookbook-desktop {
+      display: none;
+    }
+    .lookbook-mobile {
+      display: block;
+    }
+
+    .mobile-items {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 1rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+      margin-bottom: 100px;
+    }
+
+    .mobile-items::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 100vw; /* Gør hvert kort præcis én viewport bred */
+      scroll-snap-align: center;
+      box-sizing: border-box;
+    }
+
+    /****************ROSKILDE ************/
+
+    .ros {
+      background-color: #f39031;
+      color: white;
+    }
+
+    .popup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-side {
+      flex-shrink: 0;
+      max-width: 350px;
+      padding: 45px;
+    }
+
+    @media (width >= 768px) {
+      .popup {
+        flex-direction: row;
+        gap: 50px;
+        padding: 40px 0;
+      }
+    }
+
+    @media (width >= 1024px) {
+      .lookbook-desktop {
+        display: block;
+      }
+
+      .lookbook-mobile {
+        display: none;
+      }
+
+      .lookbook-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(100vh, auto);
+        row-gap: 100px;
+      }
+
+      .lookbook-image {
+        position: relative;
+      }
+
+      .lookbook-image img {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+      }
+
+      .lookbook-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        overflow-y: scroll;
+        padding: 2rem;
+      }
+    }
+  </style>
 </Layout>
-
-<style>
-  /* section {
-    margin-bottom: auto;
-  } */
-  /**************BANNER ***************/
-  .banner img {
-    width: 100%;
-  }
-  .banner {
-    margin-bottom: -5px;
-  }
-
-  /**************FÅ LOOKET ***************/
-  .lookbook-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(100vh, auto);
-    row-gap: 100px;
-  }
-
-  .lookbook-image {
-    position: relative;
-  }
-
-  .lookbook-image img {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-  }
-
-  .lookbook-items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    overflow-y: scroll;
-    padding: 2rem;
-  }
-
-  /****************ROSKILDE ************/
-
-  .ros {
-    background-color: #f39031;
-    color: white;
-  }
-
-  .popup {
-    display: flex;
-    flex-direction: column;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image-side {
-    flex-shrink: 0;
-    max-width: 350px;
-    padding: 45px;
-  }
-
-  @media (width >= 768px) {
-    .popup {
-      flex-direction: row;
-      gap: 50px;
-      padding: 40px 0;
-    }
-    padding: 45px;
-  }
-
-  @media (width >= 768px) {
-    .popup {
-      flex-direction: row;
-      gap: 50px;
-      padding: 40px 0;
-    }
-  }
-</style>
