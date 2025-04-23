@@ -1,0 +1,39 @@
+---
+import Card from "../card.astro";
+---
+
+<section class="kolfavorit">
+  <div class="favoritheaders">
+    <h1>Favoritter fra kollektionen</h1>
+    <h2>Se kollektionen nu</h2>
+  </div>
+  <div class="favoritter">
+    <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="/item1.webp" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+  </div>
+  <div class="3imgbanner">
+    <img src="/public/Group 38.png" alt="bannerphotoshoot" />
+  </div>
+</section>
+
+<style>
+  .favoritheaders {
+    margin: 4rem 4rem 4rem 7rem;
+  }
+  .favoritter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+
+    /* limit to 85% of the viewport and center */
+    max-width: 85%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  .favoritter > * {
+    flex: 0 0 calc(33.333% - 1rem);
+    box-sizing: border-box;
+  }
+</style>

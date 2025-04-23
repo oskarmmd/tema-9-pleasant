@@ -1,5 +1,6 @@
 .hero {
   background-color: #ffda5a;
+  height: 40rem;
 }
 
 .hero-logo {
@@ -38,6 +39,6 @@
   padding: 4rem;
 }
 
-h1{
+h1 {
   font-weight: 700;
 }
