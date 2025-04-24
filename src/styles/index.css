@@ -8,15 +8,16 @@
 }
 
 .hero_inner {
-  display: flex; /* Gør container til flexbox */
-  align-items: center; /* Centrer items lodret */
-  justify-content: space-between; /* Fordel tekst og billeder i hver sin side */
-  gap: 2rem; /* Lidt luft mellem kolonnerne */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-around; 
+ 
 }
 
-/* Sørger for at tekst‑kolonnen ikke bliver for bred */
+
 .hero_textnbutton {
-  flex: 1 1 40%; /* vokser/bliver skrumpet men min. 40% bredde */
+  flex: 1 1 40%; 
   font-size: 2rem;
   justify-content: center;
   align-items: center;
@@ -37,4 +38,20 @@
 
 .collage {
   padding: 4rem;
+  position: absolute;
+  top: 55%;
+  width: 40%;
+}
+
+
+@media (width >= 768px) {
+  .hero_inner {
+    flex-direction: row;
+    /* padding: 30px 0;
+    gap: 30px; */
+  }
+
+  .collage{
+    position: relative;
+  }
 }
