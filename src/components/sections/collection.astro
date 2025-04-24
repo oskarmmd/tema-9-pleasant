@@ -4,33 +4,18 @@ import Card from "../card.astro";
 
 <section class="kolfavorit">
   <div class="favoritheaders">
-    <h1>Favoritter fra kollektionen</h1>
-    <h3>Se kollektionen nu</h3>
+
+    <h1>Favoritter til festival</h1>
+    <h2>Se favoritter nu</h2>
   </div>
   <div class="favoritter">
-    <Card
-      image="https://pleasant.dk/cdn/shop/files/upcycledcaps_tall174_main.jpg?v=1733909339"
-      title="Abstract nature upcycled shirt"
-      price="499,00 DKK"
-    />
-    <Card
-      image="https://pleasant.dk/cdn/shop/files/shirts_20.2.25_26.jpg?v=1740407529"
-      title="Abstract nature upcycled shirt"
-      price="499,00 DKK"
-    />
-    <Card
-      image="https://pleasant.dk/cdn/shop/files/17_main.jpg?v=1736932946"
-      title="Abstract nature upcycled shirt"
-      price="499,00 DKK"
-    />
-    <Card
-      image="https://pleasant.dk/cdn/shop/files/upcycledcaps_tall44_main.jpg?v=1734009425"
-      title="Abstract nature upcycled shirt"
-      price="499,00 DKK"
-    />
+    <Card image="https://pleasant.dk/cdn/shop/files/upcycledcaps_tall174_main.jpg?v=1733909339" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="https://pleasant.dk/cdn/shop/files/shirts_20.2.25_26.jpg?v=1740407529" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="https://pleasant.dk/cdn/shop/files/17_main.jpg?v=1736932946" title="Abstract nature upcycled shirt" price="499,00 DKK" />
+    <Card image="https://pleasant.dk/cdn/shop/files/upcycledcaps_tall44_main.jpg?v=1734009425" title="Abstract nature upcycled shirt" price="499,00 DKK" />
   </div>
   <div class="imgbanner">
-    <img src="/public/Group 38.png" alt="bannerphotoshoot" />
+    <img src="/Group 38.png" alt="bannerphotoshoot" />
   </div>
 </section>
 
@@ -52,15 +37,15 @@ import Card from "../card.astro";
   .favoritter > * {
     flex: 0 0 calc(33.333% - 1rem);
     box-sizing: border-box;
-    padding-bottom: 30px;
   }
   .kolfavorit {
     margin-bottom: -5px;
   }
-  .kolfavorit h1 {
-    font-family: "Caprasimo";
-    font-size: 2.6rem;
+  .imgbanner {
+    width: 100%;
+    overflow: hidden;
   }
+
   .kolfavorit h3 {
     text-decoration: underline;
     margin-top: -20px;
@@ -70,11 +55,36 @@ import Card from "../card.astro";
     .kolfavorit h3 {
       font-size: 15px;
       padding-top: 10px;
+
+
+  .imgbanner img {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 768px) {
+    .favoritter {
+      display: flex;
+      flex-wrap: nowrap; /* no wrapping */
+      overflow-x: auto; /* enable horizontal scroll */
+      gap: 1rem;
+      padding: 0 1rem; /* optional padding */
     }
-    .kolfavorit h1 {
-      font-size: 34px;
-      margin-top: -30px;
-      margin-right: 20px;
+    .favoritter > * {
+      flex: 0 0 calc(50% - 0.5rem); /* show exactly two cards per view */
+      box-sizing: border-box;
+    }
+    /* Optional: hide scrollbar for a cleaner look */
+    .favoritter::-webkit-scrollbar {
+      display: none;
+
+    }
+    .favoritter {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   }
 </style>
