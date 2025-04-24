@@ -4,6 +4,7 @@ import Card from "../card.astro";
 
 <section class="kolfavorit">
   <div class="favoritheaders">
+
     <h1>Favoritter til festival</h1>
     <h2>Se favoritter nu</h2>
   </div>
@@ -45,6 +46,17 @@ import Card from "../card.astro";
     overflow: hidden;
   }
 
+  .kolfavorit h3 {
+    text-decoration: underline;
+    margin-top: -20px;
+    font-size: 28px;
+  }
+  @media (max-width: 640px) {
+    .kolfavorit h3 {
+      font-size: 15px;
+      padding-top: 10px;
+
+
   .imgbanner img {
     width: 100vw;
     max-width: 100%;
@@ -68,6 +80,7 @@ import Card from "../card.astro";
     /* Optional: hide scrollbar for a cleaner look */
     .favoritter::-webkit-scrollbar {
       display: none;
+
     }
     .favoritter {
       -ms-overflow-style: none;
